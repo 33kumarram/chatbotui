@@ -16,7 +16,7 @@ export default function ChatBot() {
   setLoading(true);
 
   try {
-    const res = await fetch(`${process.env.APIS}/rag/query`, {
+    const res = await fetch(`https://chatbotapis.onrender.com/rag/query`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,6 +26,7 @@ export default function ChatBot() {
         k: 3
       }),
     });
+    console.log(res,'phi')
     const data = await res.json();
     const answer = data.answer || "No reply received.";
 
@@ -33,6 +34,7 @@ export default function ChatBot() {
     setMessages((prev) => [...prev, { sender: "bot", text: answer }]);
 
   } catch (error) {
+    console.log(error)
     setMessages((prev) => [
       ...prev,
       { sender: "bot", text: "⚠️ Server error. Try again." },
