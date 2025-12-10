@@ -16,7 +16,7 @@ export default function ChatBot() {
   setLoading(true);
 
   try {
-    const res = await fetch("http://127.0.0.1:8000/rag/query", {
+    const res = await fetch(`${process.env.APIS}/rag/query`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
