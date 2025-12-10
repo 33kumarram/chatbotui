@@ -58,7 +58,7 @@ export default function ChatBot() {
   return (
     <div style={{width:"100vw"}}>
     <div style={styles.container}>
-      <h2 style={styles.title}>📘 Book Q&A Chatbot</h2>
+      <h2 style={styles.title}>📘 GitLab Q&A Chatbot</h2>
 
       <div style={styles.chatBox}>
         {messages.map((msg, index) => (
