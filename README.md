@@ -70,7 +70,7 @@ The backend handles:
 Create a `.env` file for local development:
 
 ```env
-VITE_API_BASE_URL=https://chatbotapis.onrender.com
+APIS=https://chatbotapis.onrender.com
 ```
 
 ---
