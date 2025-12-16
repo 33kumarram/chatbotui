@@ -1,19 +1,136 @@
-# React + Vite
+GenAI Chatbot Frontend (UI)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌐 Live Application
 
-Currently, two official plugins are available:
+**UI URL:**
+👉 [https://rkchatbot.netlify.app/](https://rkchatbot.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 Overview
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+This is the **frontend user interface** for the GenAI-powered chatbot inspired by GitLab’s *Build in Public* philosophy.
+The application allows users to ask questions and receive contextual, AI-generated answers sourced from **GitLab’s Handbook and Direction pages**.
 
-Note: This will impact Vite dev & build performances.
+The UI is built using **React** and communicates with a backend API that implements a **Retrieval-Augmented Generation (RAG)** system powered by **Gemini AI** and **Pinecone**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# chatbotui
+## 🎯 Purpose
+
+* Provide an intuitive chat experience for users
+* Enable seamless follow-up questions
+* Clearly display AI responses retrieved from trusted documentation
+
+---
+
+## 🛠️ Tech Stack
+
+* **React**
+* **JavaScript**
+* **Fetch API / Axios**
+* **CSS (basic styling)**
+
+---
+
+## ✨ Features
+
+* Chat-based conversational UI
+* Real-time response rendering
+* Loading indicators during AI processing
+* Graceful error handling
+* Scrollable conversation history
+* Clean and minimal layout for accessibility
+
+---
+
+## 🔗 Backend Integration
+
+The frontend communicates with a deployed backend API.
+
+**Backend API Base URL:**
+👉 [https://chatbotapis.onrender.com](https://chatbotapis.onrender.com)
+
+**Chat Endpoint Used:**
+
+```
+POST /rag/query
+```
+
+The backend handles:
+
+* Query understanding
+* Vector similarity search
+* AI response generation
+
+---
+
+## ⚙️ Environment Configuration
+
+Create a `.env` file for local development:
+
+```env
+VITE_API_BASE_URL=https://chatbotapis.onrender.com
+```
+
+---
+
+## ▶️ Running the UI Locally
+
+### Prerequisites
+
+* Node.js (v18+ recommended)
+* npm or yarn
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+Local UI will run at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🌍 Deployment
+
+* Deployed using **Netlify**
+* Automatically builds from the main branch
+* Environment variables configured for production API usage
+
+---
+
+## 🧠 Product Thinking
+
+* Built for **employees and aspiring employees**
+* Simple UX focused on learning and discovery
+* Designed to support transparency and open knowledge access
+
+---
+
+## 📜 Notes
+
+* Uses only publicly available GitLab documentation
+* No user data is stored
+* Educational and demonstration-focused project
+
+---
+
+## 🚀 Future Enhancements
+
+* Display response sources in UI
+* Persist chat history
+* Improved error messaging
+* UI theming and accessibility improvements
+
+ 
